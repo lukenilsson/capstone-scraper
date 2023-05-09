@@ -3,8 +3,6 @@ class ProductsController < ApplicationController
   require "httparty"
 
   def index
-    @products = Product.all
-    render :index
   end
 
   def scrape_products
@@ -15,11 +13,9 @@ class ProductsController < ApplicationController
 
     products = parsed_page.css(".kib-product-title")
 
-    products.each do |product|
+    names = products.map do |product|
       title = product.css("div.kib-product-title__text").text.strip
-      puts title
     end
-
-    render json: { message: "Scraping Complete!" }
+    render json: { names: names }
   end
 end
