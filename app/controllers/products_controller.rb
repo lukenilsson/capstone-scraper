@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
       product_name = name.css("div.kib-product-title__text").text.strip
       product_price = price.css("div.kib-product-price.kib-product-price--md").text.strip.gsub("Chewy Price", "").strip
 
-      next if product_name.include?("Bundle:") || product_price.include?("Autoship Price") || product_price.include?("$29.98")
+      next if product_name.include?("Bundle:") || product_price.include?("Autoship ") || product_price.include?("$29.98")
 
       { name: product_name, price: product_price }
     end.compact
