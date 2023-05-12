@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   require "nokogiri"
   require "httparty"
+  before_action :require_login
 
   def scrape_products
     url = "https://www.chewy.com/brands/homeopet-6907?nav-submit-button=&ref-query=homeopet&ref=searchRedirect"

@@ -10,6 +10,7 @@ gem "open-uri"
 gem "httparty"
 gem "rack-cors"
 gem "jwt"
+gem "http"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
