@@ -1,24 +1,21 @@
-# README
+# Chewy Webscraper Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Scrapes the Chewy webpage for names and prices for Homeopet products.
 
-Things you may want to cover:
+User can sign up and log in to access the scraping data.
 
-* Ruby version
+Ruby backend with Nokogiri and HTTParty gems.
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+## Installation
+bundle install
 
-* Database initialization
+## Usage
 
-* How to run the test suite
+rails server
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Roadmap
 
-* ...
+Future improvements: Set up a schedule for the scraper to run and each time gets put into a database with time signatures. If price is lower than MAP there will be a notification.
